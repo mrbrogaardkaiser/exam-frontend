@@ -1,7 +1,5 @@
 import{ renderTemplate, setActive, showPage} from "./utility.js"
 
-
-
 function renderNavItems(evt){
     const element = evt.target
     setActive(element)
