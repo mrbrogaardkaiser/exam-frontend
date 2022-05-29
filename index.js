@@ -12,7 +12,7 @@ function renderNavItems(evt){
         case "unit":{
             break
         }
-        case "dummy":{
+        case "about":{
             break
         }
        
