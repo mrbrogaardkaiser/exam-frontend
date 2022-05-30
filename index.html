@@ -81,7 +81,7 @@
       <!-- Add rider-->
       <div class="flexbox-container">
         <div class="flexbox-item">
-            <h4 class="display-4">Add new rider</h2>
+            <h4 class="display-4">Add new rider</h4>
             <hr />
             <form class="add-post-form">
               <label for="name">Name</label>
@@ -98,11 +98,49 @@
         </div>
       </div>
 
+      <!-- Rider list-->
       <div class="flexbox-container">
         <div class="flexbox-item">
-          
+          <h4 class="display-4">All riders</h4>
+        <hr />
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Name</th>
+              <th>Nation</th>
+              <th>Date of birth</th>
+              <th>Total time</th>
+              <th>Climber points</th>
+              <th>Sprint points</th>
+            </tr>
+          </thead>
+          <tbody id="tbl-id"></tbody>
+        </table>
         </div>
       </div>
+
+      <!-- Edit rider-->
+      <div class="flexbox-container">
+        <div class="flexbox-item">
+          <h4 class="display-4">Edit rider</h4>
+          <hr />
+        </div>
+      </div>
+
+      <!-- Delete rider-->
+      <div class="flexbox-container">
+        <div class="flexbox-item">
+          <h4 class="display-4">Delete rider</h4>
+          <form class="delete-post-form">
+            <label for="rider-id">Rider id</label>
+            <input type="text" class="form-control" id="delete-id" />
+            <hr />
+            <button id="btn-delete-rider" type="submit" class="btn btn-primary">Delete rider
+            </button>
+        </div>
+      </div>
+
 
 </template>
 
