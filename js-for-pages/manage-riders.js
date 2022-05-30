@@ -111,12 +111,16 @@ function deleteRider(){
 
     fetch(URL+"/"+id,
     {
-        method: "DELETE",
-        
+        method: "DELETE", 
     })
+
         
-        .catch(err => console.log("Error: " + err))
-        .finally(err => console.log("Done"))
+    .then(res=>handleHttpErrors(res))
+    .catch(err => console.log("Error: " + err))
         
+         
 })
+
+
+
 }

@@ -101,8 +101,10 @@
       <!-- Rider list-->
       <div class="flexbox-container">
         <div class="flexbox-item">
+
           <h4 class="display-4">All riders</h4>
         <hr />
+
         <table class="table">
           <thead>
             <tr>
@@ -111,8 +113,9 @@
               <th>Nation</th>
               <th>Date of birth</th>
               <th>Total time</th>
-              <th>Climber points</th>
-              <th>Sprint points</th>
+              <th id="climber-id">Climber points</th>
+              <th id="sprint-id">Sprint points</th>
+   
             </tr>
           </thead>
           <tbody id="tbl-id"></tbody>
@@ -159,10 +162,20 @@
 </template>
 
 <template data-id="overall-ranking">
+
+  
   <div class="flexbox-container">
       <div class="flexbox-item">
+
           <h1 class="display-1">Ranking</h1>
+
+
         <hr />
+</div>
+    </div>
+    <div class="flexbox-container">
+      <div class="flexbox-item">
+
         <table class="table">
           <thead>
             <tr>
@@ -176,7 +189,7 @@
               <th>Team</th>
             </tr>
           </thead>
-          <tbody id="tbl-id"></tbody>
+          <tbody id="ranking-tbl-id"></tbody>
         </table>
       </div>
     </div>
