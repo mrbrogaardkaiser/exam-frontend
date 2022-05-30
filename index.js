@@ -1,5 +1,5 @@
 import{ renderTemplate, setActive, showPage} from "./utility.js"
-
+import { setupRankingHandlers } from "./js-for-pages/ranking.js";
 import { setupRiderHandlers } from "./js-for-pages/manage-riders.js";
 
 function renderNavItems(evt){
@@ -16,6 +16,7 @@ function renderNavItems(evt){
             break
         }
         case "overall-ranking":{
+            setupRankingHandlers()
             break
         }
         case "about":{

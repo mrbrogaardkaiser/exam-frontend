@@ -7,7 +7,7 @@ export function setupRiderHandlers(){
     document.getElementById("btn-add-rider").onclick=addRider;
     getAllRiders();
     document.getElementById("btn-delete-rider").onclick=deleteRider;
- 
+    document.getElementById("btn-edit-rider").onclick=editRider;
 }
 
 
@@ -58,8 +58,6 @@ function getAllRiders(){
             <td>${r.timeInSeconds}</td>
             <td>${r.climberPoints}</td>
             <td>${r.sprintPoint}</td>
-            
-            
         </tr>    
         `).join("\n")
             document.getElementById("tbl-id").innerHTML=rows;
@@ -73,6 +71,34 @@ function getAllRiders(){
 
 
 function editRider(){
+    const addPostForm = document.querySelector(".edit-post-form")
+    const id = document.getElementById("enter-id").value
+    const nameValue = document.getElementById("edit-name")
+    const nationValue = document.getElementById("edit-nation")
+    const birthValue = document.getElementById("edit-date-of-birth")
+
+    addPostForm.addEventListener("submit", (e)=>{
+        e.preventDefault();
+
+        fetch(URL+"/"+id,{
+            method: "PUT",
+            headers:{
+                "Accept": "application/json",
+                "Content-Type": "application/json"
+
+            },
+            body: JSON.stringify({
+                name: nameValue.value,
+                nation: nationValue.value,
+                dateOfBirth: birthValue.value,
+        })
+    })
+    .then(res => res.json())
+    .then(data=> {
+        const dataArr = [];
+        dataArr.push(data);
+    })
+})
     
 }
 
@@ -82,9 +108,6 @@ function deleteRider(){
 
     addPostForm.addEventListener("click", (e)=> {
         e.preventDefault();
-
-        console.log(id)
-
 
     fetch(URL+"/"+id,
     {

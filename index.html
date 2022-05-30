@@ -38,7 +38,7 @@
                 <a id="manage-riders" href="#" class="nav-link">Manage riders</a>
               </li>
               <li class="nav-item">
-                <a id="overall-ranking" href="#" class="nav-link">Rider overview</a>
+                <a id="overall-ranking" href="#" class="nav-link">Overall ranking</a>
               </li>
 
               <li class="nav-item">
@@ -125,6 +125,20 @@
         <div class="flexbox-item">
           <h4 class="display-4">Edit rider</h4>
           <hr />
+          <form class="edit-post-form">
+            <label for="enter-id">Enter id</label>
+            <input type="text" class="form-control" id="enter-id" />
+            <label for="edit-name">Edit name</label>
+            <input type="text" class="form-control" id="edit-name" />
+            <label for="edit-nation">Edit nation</label>
+            <input type="text" class="form-control" id="edit-nation" />
+            <label for="edit-date-of-birth">Edit date of birth</label>
+            <input type="text" class="form-control" id="edit-date-of-birth" />
+            <hr />
+      <button id="btn-edit-rider" type="submit" class="btn btn-primary">
+        Edit rider
+      </button>
+  </form>
         </div>
       </div>
 
@@ -144,7 +158,7 @@
 
 </template>
 
-<template data-id="rankin">
+<template data-id="overall-ranking">
   <div class="flexbox-container">
       <div class="flexbox-item">
           <h1 class="display-1">Ranking</h1>
@@ -152,14 +166,18 @@
         <table class="table">
           <thead>
             <tr>
-              <th>Unit</th>
-              <th>Unit</th>
-              <th>Unit</th>
+              <th>Rank</th>
+              <th>Total time</th>
+              <th>Name</th>
+              <th>Nation</th>
+              <th>Date of birth</th>
+              <th>Climber points</th>
+              <th>Sprint points</th>
+              <th>Team</th>
             </tr>
           </thead>
           <tbody id="tbl-id"></tbody>
         </table>
-  
       </div>
     </div>
     
