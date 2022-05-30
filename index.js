@@ -1,5 +1,7 @@
 import{ renderTemplate, setActive, showPage} from "./utility.js"
 
+import { setupRiderHandlers } from "./js-for-pages/manage-riders.js";
+
 function renderNavItems(evt){
     const element = evt.target
     setActive(element)
@@ -9,7 +11,11 @@ function renderNavItems(evt){
         case "home": {
             break
         }
-        case "unit":{
+        case "manage-riders":{
+            setupRiderHandlers();
+            break
+        }
+        case "overall-ranking":{
             break
         }
         case "about":{

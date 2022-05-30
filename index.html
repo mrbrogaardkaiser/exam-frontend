@@ -35,8 +35,12 @@
               </li>
   
               <li class="nav-item">
-                <a id="unit" href="#" class="nav-link">Units</a>
+                <a id="manage-riders" href="#" class="nav-link">Manage riders</a>
               </li>
+              <li class="nav-item">
+                <a id="overall-ranking" href="#" class="nav-link">Rider overview</a>
+              </li>
+
               <li class="nav-item">
                 <a id="about" href="#" class="nav-link">About</a>
               </li>
@@ -65,67 +69,77 @@
   </div>
     </template>
 
-<template data-id="unit">
+<template data-id="manage-riders">
     <div class="flexbox-container">
         <div class="flexbox-item">
-            <h2>The Units</h2>
-          <hr />
+            <h1 class="display-1">Manage riders</h2>
+          <hr/>
         </div>
       </div>
 
 
-      <!--  Load all candidates-->
+      <!-- Add rider-->
       <div class="flexbox-container">
         <div class="flexbox-item">
-            <table class="table">
-                <thead>
-                  <tr>
-                    <th>Unit</th>
-                    <th>Unit</th>
-                    <th>Unit</th>
-                  </tr>
-                </thead>
-                <tbody id="tbl-id"></tbody>
-              </table>
-              <form>
-                <input id="input-id">
-              <button id="btn-sort" type="button" class="btn btn-primary">Sort by ?</button>
-              <button id="btn-clear" class="btn btn-primary">Clear</button>
-            </form>
-        </div>
-      </div>
-
-
-      <!-- Add candidate-->
-      <div class="flexbox-container">
-        <div class="flexbox-item">
-            <h2>Add new ?</h2>
+            <h4 class="display-4">Add new rider</h2>
             <hr />
             <form class="add-post-form">
-              <label for="?">?</label>
-              <input type="text" class="form-control" id="?" />
-              
+              <label for="name">Name</label>
+              <input type="text" class="form-control" id="add-name" />
+              <label for="nation">Nation</label>
+              <input type="text" class="form-control" id="add-nation" />
+              <label for="date-of-birth">Date of birth</label>
+              <input type="text" class="form-control" id="add-date-of-birth" />
               <hr />
-        <button id="btn-add-?" type="submit" class="btn btn-primary">
-          Add candidate
+        <button id="btn-add-rider" type="submit" class="btn btn-primary">
+          Add rider
         </button>
     </form>
-
         </div>
       </div>
 
-
+      <div class="flexbox-container">
+        <div class="flexbox-item">
+          
+        </div>
+      </div>
 
 </template>
+
+<template data-id="rankin">
+  <div class="flexbox-container">
+      <div class="flexbox-item">
+          <h1 class="display-1">Ranking</h1>
+        <hr />
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Unit</th>
+              <th>Unit</th>
+              <th>Unit</th>
+            </tr>
+          </thead>
+          <tbody id="tbl-id"></tbody>
+        </table>
+  
+      </div>
+    </div>
+    
+  </template>
 
 
 <template data-id="about">
     <div class="flexbox-container">
         <div class="flexbox-item">
-            <p>This application is developed by Lars Kaiser for the programming exam </p>
+            <p>This application is developed by Lars Brogaard Kaiser for the programming exam </p>
           <hr/>
-          <p>Copenhagen School of Design Technology  -  30th of June 2022</p>
+          
         </div>
       </div>
+      <div class="flexbox-container">
+        <div class="flexbox-item">
+      <p>Copenhagen School of Design and Technology  -  30th of June 2022</p>
+    </div>
+  </div>
 </template>
 
