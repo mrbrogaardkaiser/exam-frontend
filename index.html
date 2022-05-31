@@ -38,9 +38,9 @@
                 <a id="manage-riders" href="#" class="nav-link">Manage riders</a>
               </li>
               <li class="nav-item">
-                <a id="overall-ranking" href="#" class="nav-link">Overall ranking</a>
+                <a id="overall-ranking" href="#" class="nav-link">Classification</a>
               </li>
-
+ 
               <li class="nav-item">
                 <a id="about" href="#" class="nav-link">About</a>
               </li>
@@ -77,6 +77,7 @@
         </div>
       </div>
 
+      
 
       <!-- Add rider-->
       <div class="flexbox-container">
@@ -89,7 +90,7 @@
               <label for="nation">Nation</label>
               <input type="text" class="form-control" id="add-nation" />
               <label for="date-of-birth">Date of birth</label>
-              <input type="text" class="form-control" id="add-date-of-birth" />
+              <input type="date" class="form-control" id="add-date-of-birth" />
               <hr />
         <button id="btn-add-rider" type="submit" class="btn btn-primary">
           Add rider
@@ -102,9 +103,6 @@
       <div class="flexbox-container">
         <div class="flexbox-item">
 
-          <h4 class="display-4">All riders</h4>
-        <hr />
-
         <table class="table">
           <thead>
             <tr>
@@ -112,10 +110,7 @@
               <th>Name</th>
               <th>Nation</th>
               <th>Date of birth</th>
-              <th>Total time</th>
-              <th id="climber-id">Climber points</th>
-              <th id="sprint-id">Sprint points</th>
-   
+            
             </tr>
           </thead>
           <tbody id="tbl-id"></tbody>
@@ -129,14 +124,14 @@
           <h4 class="display-4">Edit rider</h4>
           <hr />
           <form class="edit-post-form">
-            <label for="enter-id">Enter id</label>
+            <label for="enter-id">Enter rider id</label>
             <input type="text" class="form-control" id="enter-id" />
             <label for="edit-name">Edit name</label>
             <input type="text" class="form-control" id="edit-name" />
             <label for="edit-nation">Edit nation</label>
             <input type="text" class="form-control" id="edit-nation" />
             <label for="edit-date-of-birth">Edit date of birth</label>
-            <input type="text" class="form-control" id="edit-date-of-birth" />
+            <input type="date" class="form-control" id="edit-date-of-birth" />
             <hr />
       <button id="btn-edit-rider" type="submit" class="btn btn-primary">
         Edit rider
@@ -150,13 +145,16 @@
         <div class="flexbox-item">
           <h4 class="display-4">Delete rider</h4>
           <form class="delete-post-form">
-            <label for="rider-id">Rider id</label>
+            <label for="rider-id">Enter rider id</label>
             <input type="text" class="form-control" id="delete-id" />
             <hr />
             <button id="btn-delete-rider" type="submit" class="btn btn-primary">Delete rider
             </button>
         </div>
       </div>
+
+
+
 
 
 </template>
@@ -167,7 +165,7 @@
   <div class="flexbox-container">
       <div class="flexbox-item">
 
-          <h1 class="display-1">Ranking</h1>
+          <h1 class="display-1">General classification</h1>
 
 
         <hr />
@@ -180,7 +178,7 @@
           <thead>
             <tr>
               <th>Rank</th>
-              <th>Total time</th>
+              <th>Time</th>
               <th>Name</th>
               <th>Nation</th>
               <th>Date of birth</th>
@@ -194,8 +192,6 @@
       </div>
     </div>
     
-  </template>
-
 
 <template data-id="about">
     <div class="flexbox-container">

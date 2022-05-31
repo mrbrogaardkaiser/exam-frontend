@@ -11,8 +11,6 @@ export function setupRiderHandlers(){
 }
 
 
-
-
 function addRider(){
     const addPostForm = document.querySelector(".add-post-form")
     const nameValue = document.getElementById("add-name")
@@ -55,9 +53,6 @@ function getAllRiders(){
             <td>${r.name}</td>
             <td>${r.nation}</td>
             <td>${r.dateOfBirth}</td>
-            <td>${r.timeInSeconds}</td>
-            <td>${r.climberPoints}</td>
-            <td>${r.sprintPoint}</td>
         </tr>    
         `).join("\n")
             document.getElementById("tbl-id").innerHTML=rows;
@@ -117,10 +112,7 @@ function deleteRider(){
         
     .then(res=>handleHttpErrors(res))
     .catch(err => console.log("Error: " + err))
-        
-         
+
 })
-
-
 
 }
